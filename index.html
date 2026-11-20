@@ -13,12 +13,33 @@
 
     <header class="site-header">
         <!-- Titolo dell'app + form di ricerca -->
+        <h1>SportsHub</h1>
+        <p>Cerca una squadra, scopri prossime partite e ultimi risultati.</p>
+        <form id="ricercaForm" class="d-flex gap-2 col-12 col-md-9 col-lg-6 mx-auto">
+            <input type="text" id="inputRicerca" class="form-control" placeholder="es. Arsenal, Lakers, Real Madrid..."
+                required>
+            <button type="submit" class="btn btn-light col-2">Cerca</button>
+        </form>
     </header>
 
     <main class="container">
 
+        <section id="preferiti-section">
+            <h2>⭐️ Le tue squadre preferite</h2>
+            <p>Non hai ancora salvato nessuna squadra. Cercane una qui sopra e aggiungila ai preferiti.</p> 
+
+        </section>
+
         <section id="risultati-section">
             <!-- Spinner, errore, lista risultati ricerca squadre -->
+            <h2>Squadre trovate</h2>
+            
+            <div id="listaRisultati" class="row g-3">
+                <p>Inizia cercando una squadra qui sopra.</p>
+            </div>
+
+
+
         </section>
 
         <section id="dettagli-section" hidden>

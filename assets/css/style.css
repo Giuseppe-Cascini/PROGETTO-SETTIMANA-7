@@ -28,3 +28,6 @@ body {
 
 
 /* Aggiungi qui le tue regole per: form, risultati, card squadra, eventi. */
+img {
+    width: 100px;
+}
