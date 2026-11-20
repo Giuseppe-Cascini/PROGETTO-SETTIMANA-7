@@ -202,8 +202,20 @@ function renderPreferiti() {
 
         const paese = document.createElement('p');
         paese.textContent = squadra.paese;
+        const btnRimuovi = document.createElement('button');
+        btnRimuovi.className = 'btn btn-danger w-100';
+        btnRimuovi.textContent = 'Rimuovi';
 
-        cardBody.append(img, nomeSquadra, lega, paese);
+        btnRimuovi.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            preferiti = preferiti.filter(p => p.id !== squadra.id);
+
+            salvaPreferiti();
+            renderPreferiti();
+        });
+
+        cardBody.append(img, nomeSquadra, lega, paese, btnRimuovi);
         card.appendChild(cardBody);
         article.appendChild(card);
         row.appendChild(article);
