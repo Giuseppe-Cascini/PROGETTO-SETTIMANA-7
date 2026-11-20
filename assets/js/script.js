@@ -207,6 +207,9 @@ function renderPreferiti() {
         card.appendChild(cardBody);
         article.appendChild(card);
         row.appendChild(article);
+        card.addEventListener('click', () => {
+            dettagli(squadra.id, squadra.nome);
+        });
     });
 
     preferitiSection.appendChild(row);
